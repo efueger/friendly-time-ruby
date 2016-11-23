@@ -1,5 +1,9 @@
 # FriendlyTime
 
+[![Code Climate](https://codeclimate.com/github/bellabling/friendly-time-ruby/badges/gpa.svg)](https://codeclimate.com/github/bellabling/friendly-time-ruby)
+[![Test Coverage](https://codeclimate.com/github/bellabling/friendly-time-ruby/badges/coverage.svg)](https://codeclimate.com/github/bellabling/friendly-time-ruby/coverage)
+[![Issue Count](https://codeclimate.com/github/bellabling/friendly-time-ruby/badges/issue_count.svg)](https://codeclimate.com/github/bellabling/friendly-time-ruby)
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/friendly_time`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
