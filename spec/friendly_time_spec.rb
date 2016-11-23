@@ -5,7 +5,7 @@ describe FriendlyTime do
     expect(FriendlyTime::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'answers with seconds ago' do
+    expect(FriendlyTime::FriendlyTimeProvider.friendly_time(5, 0)).to eql("seconds ago")
   end
 end
