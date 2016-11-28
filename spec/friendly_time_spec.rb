@@ -61,47 +61,47 @@ describe FriendlyTime do
 		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(43200, 0)).to eql("about 12 hours ago")
 	end
 
-	# it 'answers with about 18 hours ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(86400, 0)).to eql("about 18 hours ago")
-	# end
+	it 'answers with about 18 hours ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(64800, 0)).to eql("about 18 hours ago")
+	end
 
-	# it 'answers with yesterday' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(172800, 0)).to eql("yesterday")
-	# end
+	it 'answers with yesterday' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(86400, 0)).to eql("yesterday")
+	end
 
-	# it 'answers with couple of days ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(259200, 0)).to eql("a couple of days ago")
-	# end
+	it 'answers with couple of days ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(172800, 0)).to eql("a couple of days ago")
+	end
 
-	# it 'answers with days ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(604800, 0)).to eql("days ago")
-	# end
+	it 'answers with days ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(259200, 0)).to eql("days ago")
+	end
 
-	# it 'answers with about a week ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(1209600, 0)).to eql("about a week ago")
-	# end
+	it 'answers with about a week ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(604800, 0)).to eql("about a week ago")
+	end
 
-	# it 'answers with a couple of weeks ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(1814400, 0)).to eql("about a couple of weeks ago")
-	# end
+	it 'answers with a couple of weeks ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(1209600, 0)).to eql("a couple of weeks ago")
+	end
 
-	# it 'answers with weeks ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(4838400, 0)).to eql("weeks ago")
-	# end
+	it 'answers with weeks ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(1814400, 0)).to eql("weeks ago")
+	end
 
-	# it 'answers with months ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(29030400, 0)).to eql("months ago")
-	# end
+	it 'answers with months ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(4838400, 0)).to eql("months ago")
+	end
 
-	# it 'answers with about a year ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(58060800, 0)).to eql("about a year ago")
-	# end
+	it 'answers with about a year ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(31449600, 0)).to eql("about a year ago")
+	end
 
-	# it 'answers with a couple of years ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(87091200, 0)).to eql("a couple of years ago")
-	# end
+	it 'answers with a couple of years ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(62899200, 0)).to eql("a couple of years ago")
+	end
 
-	# it 'answers with years ago' do
-		# expect(FriendlyTime::FriendlyTimeProvider.friendly_time(87091200 + 1, 0)).to eql("years ago")
-	# end
+	it 'answers with years ago' do
+		expect(FriendlyTime::FriendlyTimeProvider.friendly_time(94348800, 0)).to eql("years ago")
+	end
 end
