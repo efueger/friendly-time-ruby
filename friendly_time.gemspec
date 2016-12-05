@@ -16,6 +16,6 @@ Gem::Specification.new do |spec|
   spec.executables   = "friendly_time"
   spec.require_paths = "lib"
   
-  spec.add_development_dependency("rake","~> 11.3.0")
+  spec.add_development_dependency("rake","~> 11.3")
 
 end
