@@ -30,7 +30,9 @@ option_parser.parse!
 
 if options[:to_time].eql?(-1)
 	STDERR.puts "ERROR: the '--to_time' argument is required"
-	raise OptionParser::MissingArgument
+	puts option_parser.help
+	# raise OptionParser::MissingArgument
+	exit 1
 end
 
 puts options.inspect
