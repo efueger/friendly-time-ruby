@@ -7,8 +7,8 @@ module FriendlyTime
 	@one_month_in_seconds = @one_day_in_seconds * 28
 	@one_year_in_seconds = @one_month_in_seconds * 12
 	
-	def self.friendly_time(now_time, other_time)
-		timeInSecs = (now_time - other_time)  / 1000
+	def self.friendly_time(from_time, to_time)
+		timeInSecs = (from_time - to_time)  / 1000
 		
 		if timeInSecs.abs < @one_minute_in_seconds
 			if timeInSecs > 0
