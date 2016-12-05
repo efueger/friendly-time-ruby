@@ -1,2 +1,0 @@
-require 'friendly_time/cli'
-FriendlyTime::CLI.start(ARGV)
