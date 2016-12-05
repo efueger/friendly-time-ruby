@@ -35,4 +35,4 @@ if options[:to_time].eql?(-1)
 	exit 1
 end
 
-FriendlyTime::FriendlyTimeProvider.friendly_time options[:from_time], options[:to_time]
+puts FriendlyTime::FriendlyTimeProvider.friendly_time options[:from_time], options[:to_time]
