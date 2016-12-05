@@ -4,7 +4,7 @@ require 'optparse'
 require_relative '../lib/friendly_time.rb'
 require_relative '../lib/version.rb'
 
-options = {:from_time=>(Time.now.to_i * 1000), :to_time=>0}
+options = {:from_time=>(Time.now.to_i * 1000), :to_time=>-1}
 
 option_parser = OptionParser.new do |opts|
 	executable_name = File.basename($PROGRAM_NAME)
@@ -16,8 +16,8 @@ option_parser = OptionParser.new do |opts|
 		options[:from_time] = time_in_millis.to_i
 	end	
 	
-	opts.on("-t TIME_IN_MILLIS", "--to_time TIME_IN_MILLIS", "the time to measure to. Required.") do |time_in_millis|
-		options[:to_time] = time_in_millis
+	opts.on("-t TIME_IN_MILLIS", "--to_time TIME_IN_MILLIS", "the time to measure to. Required.", /^[0-9]+$/) do |time_in_millis|
+		options[:to_time] = time_in_millis.to_i
 	end
 	
 	opts.on("-v", "--version", "version number. All other options will be ignored.") do
@@ -27,5 +27,10 @@ option_parser = OptionParser.new do |opts|
 end
 
 option_parser.parse!
+
+if options[:to_time].eql?(-1)
+	STDERR.puts "ERROR: the '--to_time' argument is required"
+	raise OptionParser::MissingArgument
+end
 
 puts options.inspect
