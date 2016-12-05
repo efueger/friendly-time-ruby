@@ -1,0 +1,31 @@
+#! /usr/bin/env ruby
+
+require 'optparse'
+require_relative '../lib/friendly_time.rb'
+require_relative '../lib/version.rb'
+
+options = {:from_time=>(Time.now.to_i * 1000), :to_time=>0}
+
+option_parser = OptionParser.new do |opts|
+	executable_name = File.basename($PROGRAM_NAME)
+	opts.banner = "\tProvides casual time strings, such as 'about a minute ago'
+	
+	Usage: #{executable_name} [options]"
+	
+	opts.on("-f TIME_IN_MILLIS", "--from_time TIME_IN_MILLIS", "the time to measure from. If omitted, the current time is used.", /^[0-9]+$/) do |time_in_millis|
+		options[:from_time] = time_in_millis.to_i
+	end	
+	
+	opts.on("-t TIME_IN_MILLIS", "--to_time TIME_IN_MILLIS", "the time to measure to. Required.") do |time_in_millis|
+		options[:to_time] = time_in_millis
+	end
+	
+	opts.on("-v", "--version", "version number. All other options will be ignored.") do
+		puts "Version #{Friendly_Time::VERSION}"
+		exit
+	end	
+end
+
+option_parser.parse!
+
+puts options.inspect

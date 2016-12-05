@@ -1,8 +1,9 @@
-require 'spec_helper'
+require_relative '../lib/friendly_time.rb'
+require_relative '../lib/version.rb'
 
-describe FriendlyTime do
+describe Friendly_Time do
     it 'has a version number' do
-    expect(FriendlyTime::VERSION).not_to be nil
+    expect(Friendly_Time::VERSION).not_to be nil
 	end
 	
 	before(:all) do
