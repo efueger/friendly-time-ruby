@@ -1,3 +1,5 @@
+test change #1
+
 # FriendlyTime
 
 [![Build Status](https://travis-ci.org/bellabling/friendly-time-ruby.svg?branch=master)](https://travis-ci.org/bellabling/friendly-time-ruby)
