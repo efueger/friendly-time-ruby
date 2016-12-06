@@ -1,5 +1,5 @@
 require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+SimpleCov
 
 require_relative '../lib/friendly_time.rb'
 require_relative '../lib/version.rb'
