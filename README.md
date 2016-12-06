@@ -16,11 +16,12 @@ Provides casual time strings for events in the past. E.g. "about 10 minutes ago"
 
 ## Usage
 
-	long timeNow = System.currentTimeMillis();
-	long timeThen = timeNow - 5000;
-	String friendlyTime = FriendlyTime.getFriendlyTime(timeNow, timeThen));
+	friendly_time -t 1481033316000
+	//outputs: seconds ago
 	
-	//friendlyTime has value "seconds ago"
+	friendly_time -t 1481033316000 -f 14810333150
+	//outputs: years from now
+
 	
 See also the unit tests.
 
