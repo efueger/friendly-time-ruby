@@ -1,5 +1,4 @@
-require_relative '../lib/friendly_time.rb'
-require_relative '../lib/version.rb'
+require 'spec_helper.rb'
 
 describe Friendly_Time do
     it 'has a version number' do
