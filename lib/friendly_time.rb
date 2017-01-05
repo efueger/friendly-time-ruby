@@ -22,6 +22,12 @@ module FriendlyTime
 			else
 				"in about a minute"
 			end
+		elsif timeInYears.abs < @one_minute_in_seconds * 10
+			if timeInYears > 0
+				"minutes ago"
+			else
+				"in a few minutes"
+			end
 		elsif timeInSecs.abs < @one_minute_in_seconds * 15
 			if timeInSecs > 0
 				"about 10 minutes ago"
