@@ -1,3 +1,8 @@
+does this decrease test coverage?
+
+module FriendlyTimers
+	
+
 module FriendlyTime
   class FriendlyTimeProvider
 	@one_minute_in_seconds = 60
